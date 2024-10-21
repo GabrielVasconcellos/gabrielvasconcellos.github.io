@@ -19,7 +19,7 @@
 	<title>Gabriel Vasconcellos - {currentProject.title}</title>
 </svelte:head>
 
-<div class="flex flex-col lg:flex-row lg:justify-between">
+<div class="flex flex-col lg:flex-row lg:gap-8 mx-10">
 	<div class="prose">
 		<h1>{currentProject.title}</h1>
 		{#if currentProject.video}

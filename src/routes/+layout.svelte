@@ -68,7 +68,7 @@
 				{/each}
 			</div>
 		</div>
-		<div class="m-10"><slot></slot></div>
+		<div class="m-10 mx-auto max-w-[90vw]"><slot></slot></div>
 	</div>
 	<div class="drawer-side">
 		<label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
