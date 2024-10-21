@@ -1,0 +1,145 @@
+:root {
+  --huge-font-size: 36px;
+  --large-font-size: 24px;
+  --medium-font-size: 20px;
+  --default-font-size: 16px;
+  --small-font-size: 12px;
+
+  --huge-padding: 64px;
+
+  --medium-gap: 32px;
+}
+
+@media (width < 769px) {
+  :root {
+    --huge-font-size: 24px;
+    --large-font-size: 20px;
+    --medium-font-size: 16px;
+    --default-font-size: 12px;
+    --small-font-size: 8px;
+
+    --huge-padding: 36px;
+  
+    --medium-gap: 24px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding-bottom: 64px;
+
+  color: white;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+
+  background-color: #2f3e46;
+}
+
+.page-container {
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--medium-gap);
+  padding: 8px var(--huge-padding);
+}
+
+.header__text {
+  font-size: var(--huge-font-size);
+  margin-right: auto;
+
+  &:hover {
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    transform: scale(1.2) skew(-20deg);
+  }
+}
+
+.growing-link {
+  display: block;
+  font-size: var(--medium-font-size);
+  color: white;
+  width: fit-content;
+  &:hover {
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    transform: scale(1.2);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--huge-padding);
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.content__about {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+
+  font-size: var(--large-font-size);
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  & > img {
+    width: 600px;
+    max-width: calc(100vw - 128px);
+  }
+}
+
+.project-page-content {
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  padding: 0 64px;
+
+  @media (width < 769px) {
+    flex-direction: column;
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--large-font-size);
+
+    & > a {
+      font-size: var(--small-font-size);
+      color: beige;
+    }
+  }
+}
